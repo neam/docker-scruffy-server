@@ -1,9 +1,11 @@
-# docker-scruffy
+# docker-scruffy-server
 
-[scruffy](https://github.com/aivarsk/scruffy) in docker.
+[scruffy-server](https://github.com/wernight/scruffy-server) in docker.
 
 ## Usage
 
 ```sh
-docker run --rm gewo/scruffy --png --scruffy '[Yeah!{bg:cornsilk}]' > yeah.png
+docker logs -f $(docker run -d -p 8080:8080 neam/scruffy-server)
 ```
+
+Visit http://ip-of-your-docker-host:8080 in your browser
